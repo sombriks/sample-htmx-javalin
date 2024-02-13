@@ -16,7 +16,7 @@ A [good kotlin ide][10] is also recommended.
 
 ## How to build
 
-we have [shadow jar plugin][20] to ease runnable jar creation
+We have [shadow jar plugin][20] to ease runnable jar creation
 
 ```bash
 ./gradlew shadowJar
@@ -24,13 +24,13 @@ we have [shadow jar plugin][20] to ease runnable jar creation
 
 ## How to run
 
-we have [application plugin][30] to ease runnable jar creation options
+We have [application plugin][30] to ease runnable jar creation options
 
 ```bash
 ./gradlew run
 ```
 
-alternatively, run the jar built in previous step:
+Alternatively, run the jar built in previous step:
 
 ```bash
 java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
@@ -40,10 +40,10 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 
 - [Shadow plugin][20] does similar job done by [maven shade plugin][40]
 - Javalin supports a good range of [template engines][50], just pick one
+- There are a good amount of [logging options][60] to Javalin
+- Spock demands us to enable the groovy language but it worths the effort
 
 ## Next steps
-
-## Reference
 
 [00]: https://github.com/sombriks/sample-htmx-javalin
 [10]: https://www.jetbrains.com/idea/download
@@ -51,3 +51,4 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 [30]: https://docs.gradle.org/current/userguide/application_plugin.html
 [40]: https://github.com/sombriks/sample-jdbi-javalin/blob/main/pom.xml
 [50]: https://javalin.io/plugins/rendering#configuring-a-template-engine
+[60]: https://javalin.io/tutorials/javalin-logging
