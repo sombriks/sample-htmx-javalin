@@ -25,6 +25,8 @@ dependencies {
     implementation("org.jdbi:jdbi3-kotlin-sqlobject:3.44.1")
     implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
     implementation("org.webjars.npm:htmx.org:2.0.0-alpha1")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.1")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.spockframework:spock-core:2.3-groovy-4.0")

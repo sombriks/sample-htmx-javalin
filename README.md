@@ -43,6 +43,7 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 - There are a good amount of [logging options][60] to Javalin
 - Spock demands us to enable the groovy language in the project
 - Groovy support has issues to proper set jvm toolchain, fallbacks to system
+- There is a [nice htmx plugin][70] for intellij
 
 ## Next steps
 
@@ -53,3 +54,4 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 [40]: https://github.com/sombriks/sample-jdbi-javalin/blob/main/pom.xml
 [50]: https://javalin.io/plugins/rendering#configuring-a-template-engine
 [60]: https://javalin.io/tutorials/javalin-logging
+[70]: https://plugins.jetbrains.com/plugin/20588-htmx-support

@@ -5,9 +5,14 @@
     <script src="/webjars/htmx.org/2.0.0-alpha1/dist/htmx.js"></script>
 </head>
 <body>
-<h1>Hello, $world</h1>
-<button hx-post="/clicked" hx-swap="outerHTML">
-    Click Me
-</button>
+<h1>TODO List</h1>
+<form hx-post="/todos"
+      hx-on::after-request="this.reset()" hx-swap="outerHTML" hx-target="#table">
+    <label>
+        <input name="description" placeholder="New todo here"/>
+    </label>
+    <button type="submit">Save</button>
+</form>
+    #parse("/templates/velocity/todos/list.vm")
 </body>
 </html>

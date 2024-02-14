@@ -2,9 +2,9 @@ import io.github.cdimascio.dotenv.Dotenv
 import sample.htmx.App
 import spock.lang.Specification
 
-class AppTest extends Specification{
+class AppTest extends Specification {
 
-    def "Should check app"(){
+    def "Should check app"() {
 
         App app = new App()
 
