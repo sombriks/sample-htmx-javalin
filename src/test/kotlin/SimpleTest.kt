@@ -8,7 +8,7 @@ class SimpleTest {
 
     @Test
     fun `Should check app`(){
-        val app = App(TodoService(Database()))
+        val app = App()
 
         Assertions.assertNotNull(app)
     }
