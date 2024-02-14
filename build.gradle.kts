@@ -1,5 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.22"
+    id("java")
+    id("groovy")
     id("application")
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
@@ -25,12 +27,12 @@ dependencies {
     implementation("org.webjars.npm:htmx.org:2.0.0-alpha1")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("org.spockframework:spock-core:2.3-groovy-4.0")
 }
 
 tasks.test {
     useJUnitPlatform()
-}
-
-kotlin {
-    jvmToolchain(21)
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
 }

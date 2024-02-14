@@ -4,7 +4,7 @@ Sample application showing how htmx teams up with javalin
 
 ## Dependencies
 
-- java 21
+- java 17 or newer
 - kotlin 1.9
 - jdbi 3.44
 - htmx 2.x
@@ -41,7 +41,8 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 - [Shadow plugin][20] does similar job done by [maven shade plugin][40]
 - Javalin supports a good range of [template engines][50], just pick one
 - There are a good amount of [logging options][60] to Javalin
-- Spock demands us to enable the groovy language but it worths the effort
+- Spock demands us to enable the groovy language in the project
+- Groovy support has issues to proper set jvm toolchain, fallbacks to system
 
 ## Next steps
 
