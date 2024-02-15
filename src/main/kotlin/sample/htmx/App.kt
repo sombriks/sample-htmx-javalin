@@ -10,6 +10,7 @@ import sample.htmx.config.Database
 import sample.htmx.controller.TodoController
 import sample.htmx.model.TodoItem
 import sample.htmx.service.TodoService
+import javax.xml.crypto.Data
 
 class App(
     private val controller: TodoController = TodoController(),
@@ -40,6 +41,7 @@ class App(
 }
 
 fun main() {
+    Database.init()
     val app = App()
     app.start()
 }

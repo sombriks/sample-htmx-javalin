@@ -6,13 +6,7 @@
 </head>
 <body>
 <h1>TODO List</h1>
-<form hx-post="/todos"
-      hx-on::after-request="this.reset()" hx-swap="outerHTML" hx-target="#table">
-    <label>
-        <input name="description" placeholder="New todo here"/>
-    </label>
-    <button type="submit">Save</button>
-</form>
+    #parse("/templates/velocity/todos/form.vm")
     #parse("/templates/velocity/todos/list.vm")
 </body>
 </html>

@@ -39,7 +39,10 @@ class TodoController(private val service: TodoService = TodoService()) {
 
     fun update(ctx: Context): Context {
         logger.info("update")
-        val todo = ctx.bodyAsClass<TodoItem>()
+        val todo = TodoItem(
+            description = ctx.formParam("description").toString(),
+            done = ctx.formParam("done").toBoolean()
+        )
         val id = ctx.pathParam("id").toLong()
         todo.id = id
         service.update(todo)

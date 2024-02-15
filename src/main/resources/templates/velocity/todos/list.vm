@@ -3,12 +3,21 @@
         <th>#</th>
         <th>Description</th>
         <th>Done?</th>
+        <th></th>
     </tr>
     #foreach($todo in $todos)
         <tr>
-            <td>$todo.id</td>
-            <td>$todo.description</td>
-            <td>$todo.done</td>
+            <form hx-put="/todos/$todo.id" id="item$todo.id" hx-swap="outerHTML" hx-target="#table">
+                <td>$todo.id</td>
+                <td><input type="text" name="description" value="$todo.description"/></td>
+                <td>
+                    <select name="done">
+                        <option #if($todo.done) selected #end>true</option>
+                        <option #if(!$todo.done) selected #end>false</option>
+                    </select>
+                </td>
+                <td><button type="submit">Save</button></td>
+            </form>
         </tr>
     #end
 </table>

@@ -9,7 +9,6 @@ Sample application showing how htmx teams up with javalin
 - jdbi 3.44
 - htmx 2.x
 - apache velocity 2.3
-- docker 25
 - spock 2.3
 
 A [good kotlin ide][10] is also recommended.
@@ -44,8 +43,15 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 - Spock demands us to enable the groovy language in the project
 - Groovy support has issues to proper set jvm toolchain, fallbacks to system
 - There is a [nice htmx plugin][70] for intellij
+- JDBI [fluent api][80] makes database access easier
+- TodoItem needs an empty constructor so JDBI bean mapper can fill attributes in 
 
 ## Next steps
+
+- A good form to object mapper would be handy. Javalin has [validators][90] but
+  mapping pretty much manual
+- Need a coverage solution that handles spock properly
+- 
 
 [00]: https://github.com/sombriks/sample-htmx-javalin
 [10]: https://www.jetbrains.com/idea/download
@@ -55,3 +61,4 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 [50]: https://javalin.io/plugins/rendering#configuring-a-template-engine
 [60]: https://javalin.io/tutorials/javalin-logging
 [70]: https://plugins.jetbrains.com/plugin/20588-htmx-support
+[80]: https://jdbi.org/releases/3.44.1/#_fluent_api
