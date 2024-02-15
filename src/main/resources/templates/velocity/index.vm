@@ -2,7 +2,10 @@
 <html>
 <head>
     <title>Sample Javalin with HTMX</title>
-    <script src="/webjars/htmx.org/2.0.0-alpha1/dist/htmx.js"></script>
+    <script src="/webjars/htmx.org/1.9.10/dist/htmx.js"></script>
+    <script>
+        htmx.logAll();
+    </script>
 </head>
 <body>
 <h1>TODO List</h1>
