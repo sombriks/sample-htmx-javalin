@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory
 import sample.htmx.model.TodoItem
 import sample.htmx.service.TodoService
 
-class TodoController(private val service: TodoService = TodoService()) {
+class TodoController(val service: TodoService = TodoService()) {
 
     private val logger by lazy { LoggerFactory.getLogger(TodoController::class.java) }
 

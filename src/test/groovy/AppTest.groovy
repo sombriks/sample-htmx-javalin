@@ -4,17 +4,16 @@ import spock.lang.Specification
 
 class AppTest extends Specification {
 
+    def app = new App()
+    def dotenv = Dotenv.configure().load()
+
     def "Should check app"() {
-
-        App app = new App()
-
         expect:
-        app != null
+        app.controller != null
+        app.javalin != null
     }
 
     def "should check env"() {
-        var dotenv = Dotenv.configure().load()
-
         expect:
         dotenv.get("MODE") == "test"
     }

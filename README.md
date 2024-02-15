@@ -40,7 +40,7 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 - [Shadow plugin][20] does similar job done by [maven shade plugin][40]
 - Javalin supports a good range of [template engines][50], just pick one
 - There are a good amount of [logging options][60] to Javalin
-- Spock demands us to enable the groovy language in the project
+- [Spock][90] demands us to enable the groovy language in the project
 - Groovy support has issues to proper set jvm toolchain, fallbacks to system
 - There is a [nice htmx plugin][70] for intellij
 - JDBI [fluent api][80] makes database access easier
@@ -49,7 +49,7 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 ## Next steps
 
 - A good form to object mapper would be handy. Javalin has [validators][90] but
-  mapping pretty much manual
+  besides that, form to model mapping is pretty much manual
 - Need a coverage solution that handles spock properly
 - 
 
@@ -62,3 +62,4 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 [60]: https://javalin.io/tutorials/javalin-logging
 [70]: https://plugins.jetbrains.com/plugin/20588-htmx-support
 [80]: https://jdbi.org/releases/3.44.1/#_fluent_api
+[90]: https://spockframework.org/spock/docs/2.3/spock_primer.html

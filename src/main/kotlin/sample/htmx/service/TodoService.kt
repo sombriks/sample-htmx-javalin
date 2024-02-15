@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory
 import sample.htmx.config.Database
 import sample.htmx.model.TodoItem
 
-class TodoService(private val db: Jdbi = Database.jdbi) {
+class TodoService(val db: Jdbi = Database.jdbi) {
 
     private val logger by lazy { LoggerFactory.getLogger(TodoService::class.java) }
     fun list(q: String? = ""): List<TodoItem> {

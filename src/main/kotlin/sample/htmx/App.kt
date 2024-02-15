@@ -2,19 +2,14 @@ package sample.htmx
 
 import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.*
-import io.javalin.config.JavalinConfig
-import io.javalin.http.bodyAsClass
 import io.javalin.rendering.template.JavalinVelocity
 import org.slf4j.LoggerFactory
 import sample.htmx.config.Database
 import sample.htmx.controller.TodoController
-import sample.htmx.model.TodoItem
-import sample.htmx.service.TodoService
-import javax.xml.crypto.Data
 
 class App(
-    private val controller: TodoController = TodoController(),
-    private val app: Javalin = Javalin.create { config ->
+    val controller: TodoController = TodoController(),
+    val javalin: Javalin = Javalin.create { config ->
         config.fileRenderer(JavalinVelocity())
         config.staticFiles.enableWebjars()
         config.router.apiBuilder {
@@ -36,7 +31,7 @@ class App(
 
     fun start(port: Int = 8080) {
         logger.info("start app!")
-        app.start(port)
+        javalin.start(port)
     }
 }
 
