@@ -39,5 +39,16 @@ class Database {
                 """.trimIndent())
             }
         }
+
+        @JvmStatic
+        fun testSeed() {
+            jdbi.withHandle<Any, Exception> { handle ->
+                handle.execute("""
+                    insert into todos (done, description) values (true,'laundry');
+                    insert into todos (done, description) values (false,'lunch');
+                    insert into todos (done, description) values (false,'exercise');
+                """.trimIndent())
+            }
+        }
     }
 }

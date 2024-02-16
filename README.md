@@ -46,7 +46,8 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 - Groovy support has issues to proper set jvm toolchain, fallbacks to system
 - There is a [nice htmx plugin][70] for intellij
 - JDBI [fluent api][80] makes database access easier
-- TodoItem needs an empty constructor so JDBI bean mapper can fill attributes in 
+- TodoItem needs an empty constructor so JDBI bean mapper can fill attributes in
+- [Intellij coverage plugin has an issue with velocity][11]
 
 ## Next steps
 
@@ -66,3 +67,4 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 [80]: https://jdbi.org/releases/3.44.1/#_fluent_api
 [90]: https://spockframework.org/spock/docs/2.3/spock_primer.html
 [01]: https://javalin.io/tutorials/testing#functionalintegration-tests
+[11]: https://youtrack.jetbrains.com/issue/IDEA-274803/Velocity-field-names-check-fails-with-new-coverage#focus=Comments-27-5085668.0-0

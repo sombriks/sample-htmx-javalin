@@ -32,16 +32,16 @@ class TodoService(val db: Jdbi = Database.jdbi) {
         }
     }
 
-    fun insert(item: TodoItem): Int {
+    fun insert(item: TodoItem): Long? {
         logger.info("insert todo")
-        return db.withHandle<Int, Exception> { handle ->
+        return db.withHandle<Long, Exception> { handle ->
             handle.createUpdate(
                 """
                 insert into todos(description, done)
                 values (:description, :done)
-                returning id
             """.trimIndent()
-            ).bindBean(item).execute()
+            ).bindBean(item).executeAndReturnGeneratedKeys()
+                .mapToBean(TodoItem::class.java).one().id
         }
     }
 
