@@ -1,9 +1,8 @@
+package sample.htmx
+
 import io.github.cdimascio.dotenv.Dotenv
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import sample.htmx.App
-import sample.htmx.config.Database
-import sample.htmx.service.TodoService
 
 class SimpleTest {
 

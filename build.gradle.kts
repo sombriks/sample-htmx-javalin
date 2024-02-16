@@ -29,6 +29,7 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:2.0.10")
     implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
 
+    testImplementation("io.javalin:javalin-testtools:6.0.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.spockframework:spock-core:2.3-groovy-4.0")
 

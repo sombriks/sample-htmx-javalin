@@ -39,6 +39,7 @@ class TodoService(val db: Jdbi = Database.jdbi) {
                 """
                 insert into todos(description, done)
                 values (:description, :done)
+                returning id
             """.trimIndent()
             ).bindBean(item).execute()
         }

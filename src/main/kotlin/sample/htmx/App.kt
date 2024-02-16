@@ -30,7 +30,7 @@ class App(
     private val logger by lazy { LoggerFactory.getLogger(App::class.java) }
 
     fun start(port: Int = 8080) {
-        logger.info("start app!")
+        logger.info("start app on port $port")
         javalin.start(port)
     }
 }

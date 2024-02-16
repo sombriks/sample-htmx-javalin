@@ -26,6 +26,7 @@ class Database {
             Jdbi.create(dataSource)
         }
 
+        @JvmStatic
         fun init() {
             jdbi.withHandle<Any, Exception> { handle ->
                 handle.execute("""
