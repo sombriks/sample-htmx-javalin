@@ -1,4 +1,5 @@
 # [sample-htmx-javalin][00]
+[![Java CI with Gradle](https://github.com/sombriks/sample-htmx-javalin/actions/workflows/gradle.yml/badge.svg)](https://github.com/sombriks/sample-htmx-javalin/actions/workflows/gradle.yml)
 
 Sample application showing how htmx teams up with javalin
 
