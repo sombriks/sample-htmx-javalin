@@ -53,6 +53,7 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 
 ## Next steps
 
+- [ ] Add a filter in the template. Backend already supports the 'q' parameter
 - [ ] Find a good form to object mapper would be handy. Javalin has
   [validators][90] but besides that, form to model mapping is pretty much manual
 - [ ] Setup docker image building and registry publishing
