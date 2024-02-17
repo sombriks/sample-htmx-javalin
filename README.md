@@ -1,4 +1,5 @@
 # [sample-htmx-javalin][00]
+
 [![Java CI with Gradle](https://github.com/sombriks/sample-htmx-javalin/actions/workflows/gradle.yml/badge.svg)](https://github.com/sombriks/sample-htmx-javalin/actions/workflows/gradle.yml)
 
 Sample application showing how htmx teams up with javalin
@@ -48,12 +49,12 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 - JDBI [fluent api][80] makes database access easier
 - TodoItem needs an empty constructor so JDBI bean mapper can fill attributes in
 - [Intellij coverage plugin has an issue with velocity][11]
+- [JaCoCo plugin][21] just works even the test source set being multilingual
 
 ## Next steps
 
 - [ ] Find a good form to object mapper would be handy. Javalin has
   [validators][90] but besides that, form to model mapping is pretty much manual
-- [ ] Need a coverage solution that handles spock properly
 - [ ] Setup docker image building and registry publishing
 
 [00]: https://github.com/sombriks/sample-htmx-javalin
@@ -68,3 +69,4 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 [90]: https://spockframework.org/spock/docs/2.3/spock_primer.html
 [01]: https://javalin.io/tutorials/testing#functionalintegration-tests
 [11]: https://youtrack.jetbrains.com/issue/IDEA-274803/Velocity-field-names-check-fails-with-new-coverage#focus=Comments-27-5085668.0-0
+[21]: https://docs.gradle.org/current/userguide/jacoco_plugin.html#sec:jacoco_getting_started

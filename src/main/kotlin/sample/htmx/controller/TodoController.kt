@@ -1,7 +1,6 @@
 package sample.htmx.controller
 
 import io.javalin.http.Context
-import io.javalin.http.bodyAsClass
 import org.slf4j.LoggerFactory
 import sample.htmx.model.TodoItem
 import sample.htmx.service.TodoService

@@ -20,7 +20,7 @@ class ApiTest {
     }
 
     @Test
-    fun `Should check endpoints`() = JavalinTest.test(app.javalin) { server, client ->
+    fun `Should check TodoItem endpoints`() = JavalinTest.test(app.javalin) { server, client ->
         // basic GET endpoints
         Assertions.assertEquals(200, client.get("/").code)
         Assertions.assertEquals(200, client.get("/todos").code)

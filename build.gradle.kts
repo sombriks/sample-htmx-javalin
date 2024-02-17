@@ -2,6 +2,7 @@ plugins {
     kotlin("jvm") version "1.9.22"
     id("java")
     id("groovy")
+    id("jacoco")
     id("application")
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
@@ -41,5 +42,14 @@ tasks.test {
     useJUnitPlatform()
     testLogging {
         events("passed", "skipped", "failed")
+    }
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+//https://docs.gradle.org/current/userguide/jacoco_plugin.html#sec:jacoco_report_configuration
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        csv.required = true
     }
 }
