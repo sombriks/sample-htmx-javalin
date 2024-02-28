@@ -2,7 +2,7 @@
 
 [![Java CI with Gradle](https://github.com/sombriks/sample-htmx-javalin/actions/workflows/gradle.yml/badge.svg)](https://github.com/sombriks/sample-htmx-javalin/actions/workflows/gradle.yml)
 
-Sample application showing how htmx teams up with javalin
+Sample application showing how htmx teams up with javalin so i can compare with [this one][31]
 
 ## Dependencies
 
@@ -71,3 +71,4 @@ java -jar build/libs/sample-htmx-javalin-1.0-SNAPSHOT-all.jar
 [01]: https://javalin.io/tutorials/testing#functionalintegration-tests
 [11]: https://youtrack.jetbrains.com/issue/IDEA-274803/Velocity-field-names-check-fails-with-new-coverage#focus=Comments-27-5085668.0-0
 [21]: https://docs.gradle.org/current/userguide/jacoco_plugin.html#sec:jacoco_getting_started
+[31]: https://github.com/sombriks/sample-htmx-koa
